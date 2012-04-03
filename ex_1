@@ -1,0 +1,43 @@
+=begin
+Introduction to Ruby programming 
+http://p2pu.org/en/groups/learn-ruby/
+Participant: Frank Murphy
+Tutor/Failitator: Andre Dublin 
+
+Exercise 1, Based on Chapters 2,4, A Few Things to Try
+=end
+
+print "How many hours are in a year?" 
+# Trick Question ;), could be a leap year
+puts "If year one, two or three in a cycle of four =" + (365*24) 
+puts "if year four, the leap year =" + (365*24)+24
+
+
+print "How many minutes are in a decade?"
+# As one can never fully understand, what the end-user is going to do,
+# allow for it.  But artist discretion, pretend all years are the same.
+puts ((60*24)*365)*10
+
+
+print "How many seconds old are you?"
+=begin
+As I have both Narcolepsy, and possible Dyslexia.
+Thinking, takes a lot out, but let's try.
+I was born 2-2-64, as 1964/4 gies a leap year.
+The comment will be longer that the maths,
+But, I learned years ago, "Not just what, but why?"
+Taking 1964, and 2012 this year as special cases, as neither are full years.
+Include 11 leap years, the rest as notmal 365 days.
+As yest unsure it there restricted words for vars..
+=end
+day = ((60*60)*24) # var for a day
+normal_year = day * 365 # var for a year
+puts =  "Number of seconds in a normal_year =" + normal_year 
+years_n = normal_year * 36 # var for normal years
+puts "Number of normal years  is 36, which in seconds =" + years_n  
+leap_year = day * 366 # var for leap year
+years_l = "Number of seconds in the leap years =" + leap_year * 11 # var for leap years
+birth_y = 366-32 # var for 1964, less Jan + 1st Feb. 
+# Current year is, Jan 31, Feb 29, Mar 31, April 2 (cutoff April 02 midnight)
+current_y = (((31+31+29+2)*24)*60)
+puts "Number of seconds I'm alive =" + (years_n +yesrs_l+birth_y+current_y) 
